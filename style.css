@@ -1,0 +1,93 @@
+#grid{
+    
+    /*width: 96%;
+    border: 1px solid #986;
+    outline: 1px solig black;
+    outline-offset: 3px;*/
+    width: 100%;
+
+    margin: auto;
+    min-height: 100px;
+
+    display: grid;
+    /*cellák közti távolság*/
+
+    grid-gap: 3px;
+    
+    /*grid-template: 
+    "a a a" 100px
+    "c e b" 100px
+    "d f b" 150px
+    "g h b" 100px
+    "i i i" 90px
+    /1fr 1fr 150px;*/
+
+    grid-template-columns: repeat(3, 1fr);
+    -grid-auto-columns: minmax(100px, auto);
+
+    -template-rows: 1fr 1fr 300px;
+    grid-auto-rows: minmax(100px, auto);
+
+    padding: 10px;
+}
+
+div{
+    border: 1px solid red;
+    background-color: #986;
+    opacity: 0.6;
+}
+
+#a{
+    grid-area: a;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+#b{
+    grid-area: b;
+    grid-column: 3;
+    grid-row: 1 / 2;
+}
+#c{
+    grid-area: c;
+    grid-column: 3;
+    grid-row: 2;
+}
+#d{
+    grid-area: d;
+    grid-column: 1;
+    grid-row: 1 / 4;
+}
+#e{
+    grid-area: e;
+    grid-column: 2;
+    grid-row: 1 / 7;
+}
+#f{
+    grid-area: f;
+    /*display:  grid;
+    grid-template: "f1 f2 f3" auto
+    /1fr 150px 1fr;*/
+    grid-column: 3;
+    grid-row: 3;
+
+}
+#g{
+    grid-area: g;
+}
+#h{
+    grid-area: h;
+}
+#i{
+    grid-area: i;
+}
+
+
+#f1{
+    grid-area: f1;
+}
+#f2{
+    grid-area: f2;
+}
+#f3{
+    grid-area: f3;
+}
